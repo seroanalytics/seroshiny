@@ -3,13 +3,14 @@ library(data.table)
 library(ggplot2)
 library(dplyr)
 library(shinythemes)
+library(here)
 
 # setwd("~/Documents/GitHub/seroshiny/demo/shiny_app/"); runApp()
 # deployApp(account = "kucharski", appName = "www_explore",lint=F) # Deploy
 
 # Load data
-test_values <- read.csv("data/data_raw.csv")
-model_fits <- read.csv("data/data_fitted.csv")
+test_values <- read.csv(here::here("demo", "shiny_app", "data", "data_raw.csv"))
+model_fits <- read.csv(here::here("demo", "shiny_app", "data", "data_fitted.csv") )
 #model_fits <- model_fits |> rename(titre_obs,me_trans)
 
 # UI
